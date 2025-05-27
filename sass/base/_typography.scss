@@ -1,0 +1,22 @@
+@import url("https://use.typekit.net/xjs7dmw.css");
+
+body {
+  font-family: "anek-bangla-variable", sans-serif;
+  font-variation-settings: "wdth" 100, "wght" 400;
+}
+
+.titulos {
+  font-weight: bold;
+  font-size: $font-title;
+  text-align: center;
+}
+
+.parrafo,
+.parrafo-direc {
+  font-size: $font-large;
+  padding: 0 20px;
+}
+
+.parrafo-direc {
+  text-align: center;
+}

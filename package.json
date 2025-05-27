@@ -1,0 +1,19 @@
+{
+  "name": "clase-00-01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanGalvan14/curso-coder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanGalvan14/curso-coder/issues"
+  },
+  "homepage": "https://github.com/JuanGalvan14/curso-coder#readme",
+  "description": ""
+}

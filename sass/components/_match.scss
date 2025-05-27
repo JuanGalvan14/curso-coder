@@ -1,0 +1,30 @@
+.match {
+  width: 80%;
+  max-width: 450px;
+
+  h2 {
+    background-color: $secondary-color;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+  }
+}
+
+.teams {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+
+  img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.score {
+  font-size: 32px;
+  font-weight: bold;
+}

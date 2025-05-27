@@ -1,0 +1,20 @@
+.container-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.item {
+  text-align: center;
+
+  img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+
+  p {
+    margin: 10px 0;
+  }
+}

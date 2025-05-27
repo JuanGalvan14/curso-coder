@@ -1,0 +1,40 @@
+@media (max-width: $bp-xs) {
+  .publicidades1,
+  .publicidades2 {
+    gap: 20px;
+
+    img {
+      max-width: 20%;
+      margin-bottom: 20px;
+    }
+  }
+
+  .direccion {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  .columna {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .match {
+    width: 100%;
+  }
+
+  .teams img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .score {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: $bp-sm) {
+  .container-grid {
+    grid-template-columns: 1fr;
+  }
+}

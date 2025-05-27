@@ -1,0 +1,29 @@
+.navbar {
+  ul {
+    display: flex;
+    list-style: none;
+    text-align: center;
+  }
+
+  li {
+    margin: 0 1rem;
+  }
+
+  a,
+  .nav-link {
+    text-decoration: none;
+    color: $text-white;
+    font-size: $font-base;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.navbar-brand img {
+  max-width: 80px;
+  height: auto;
+  transition: all 0.3s ease;
+}

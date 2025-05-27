@@ -1,0 +1,14 @@
+.publicidades1,
+.publicidades2 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 250px;
+
+  img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+}
