@@ -1,17 +1,24 @@
 @media (max-width: $bp-xs) {
   .publicidades1,
   .publicidades2 {
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
 
     img {
-      max-width: 20%;
-      margin-bottom: 20px;
+      max-width: 80px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
     }
   }
 
   .direccion {
-    font-size: 1rem;
-    margin-top: 10px;
+    font-size: 0.9rem;
+    padding: 0 1rem;
+    text-align: center;
+    line-height: 1.4;
   }
 
   .columna {
@@ -31,10 +38,18 @@
   .score {
     font-size: 26px;
   }
+
+  footer {
+  padding: 2rem 1rem;
 }
 
-@media (max-width: $bp-sm) {
-  .container-grid {
-    grid-template-columns: 1fr;
-  }
+.publicidades1 img,
+.publicidades2 img {
+  max-width: 80px;
+}
+
+.direccion {
+  font-size: 0.95rem;
+  padding: 0 1rem;
+}
 }

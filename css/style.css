@@ -58,12 +58,29 @@ footer {
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  width: 100%;
+  overflow-x: hidden;
 }
-
-.direccion {
+footer .publicidades1,
+footer .publicidades2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+footer .publicidades1 img,
+footer .publicidades2 img {
+  max-width: 100px;
+  width: 100%;
+  height: auto;
+}
+footer .direccion {
   text-align: center;
   color: #ffffff;
   font-size: 1.1rem;
+  max-width: 600px;
+  line-height: 1.5;
   margin-top: 20px;
 }
 
@@ -73,7 +90,7 @@ footer {
 }
 .match h2 {
   background-color: #007bff;
-  color: white;
+  color: rgb(255, 255, 255);
   text-align: center;
   width: 100%;
   padding: 10px;
@@ -174,16 +191,23 @@ header {
 @media (max-width: 425px) {
   .publicidades1,
   .publicidades2 {
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
   }
   .publicidades1 img,
   .publicidades2 img {
-    max-width: 20%;
-    margin-bottom: 20px;
+    max-width: 80px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
   }
   .direccion {
-    font-size: 1rem;
-    margin-top: 10px;
+    font-size: 0.9rem;
+    padding: 0 1rem;
+    text-align: center;
+    line-height: 1.4;
   }
   .columna {
     flex-direction: column;
@@ -199,10 +223,16 @@ header {
   .score {
     font-size: 26px;
   }
-}
-@media (max-width: 768px) {
-  .container-grid {
-    grid-template-columns: 1fr;
+  footer {
+    padding: 2rem 1rem;
+  }
+  .publicidades1 img,
+  .publicidades2 img {
+    max-width: 80px;
+  }
+  .direccion {
+    font-size: 0.95rem;
+    padding: 0 1rem;
   }
 }
 

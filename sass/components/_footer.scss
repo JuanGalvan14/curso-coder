@@ -4,11 +4,30 @@ footer {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-}
+  width: 100%;
+  overflow-x: hidden;
 
-.direccion {
-  text-align: center;
-  color: $text-white;
-  font-size: 1.1rem;
-  margin-top: 20px;
+  .publicidades1,
+  .publicidades2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    img {
+      max-width: 100px;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .direccion {
+    text-align: center;
+    color: $text-white;
+    font-size: 1.1rem;
+    max-width: 600px;
+    line-height: 1.5;
+    margin-top: 20px;
+  }
 }
