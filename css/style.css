@@ -40,8 +40,11 @@ body {
   color: #ffffff;
   font-size: 1.2rem;
 }
-.navbar a:hover, .navbar a:focus,
-.navbar .nav-link:hover,
+.navbar a:hover,
+.navbar .nav-link:hover {
+  transform: scale(1.4);
+}
+.navbar a:focus,
 .navbar .nav-link:focus {
   text-decoration: underline;
 }
@@ -84,32 +87,42 @@ footer .direccion {
   margin-top: 20px;
 }
 
-.match {
-  width: 80%;
-  max-width: 450px;
-}
-.match h2 {
-  background-color: #007bff;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.teams {
+.partidos {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.partidos .partido {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  flex: 1 1 300px;
+  max-width: 350px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.partidos .partido h2 {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+}
+.partidos .partido .logos {
+  display: flex;
   align-items: center;
-  margin: 20px 0;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
 }
-.teams img {
-  width: 150px;
-  height: 150px;
+.partidos .partido .logos img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
 }
-
-.score {
-  font-size: 32px;
+.partidos .partido .logos span {
+  font-size: 22px;
   font-weight: bold;
 }
 
@@ -128,7 +141,7 @@ footer .direccion {
 .table h2 {
   text-align: center;
   background-color: #007bff;
-  color: white;
+  color: rgb(252, 252, 252);
   padding: 10px;
   border-radius: 5px;
 }
@@ -147,6 +160,132 @@ footer .direccion {
   color: white;
 }
 
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+.wrapper .icon {
+  position: relative;
+  background: #fff;
+  z-index: 0;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon i {
+  z-index: 1;
+  font-size: 22px;
+  color: #000;
+}
+.wrapper .icon::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  z-index: -1;
+  border-radius: 50%;
+  top: 100%;
+}
+.wrapper .icon:hover::after {
+  animation: bg-pos 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+  animation-timing-function: ease-in-out;
+}
+.wrapper .icon:hover {
+  overflow: unset;
+  animation: overflow-toggle 0.7s;
+}
+.wrapper .icon:hover i {
+  color: #fff;
+  transition: color 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.wrapper .facebook::after {
+  background-color: #1877f2;
+}
+.wrapper .twitter::after {
+  background-color: #1da1f2;
+}
+.wrapper .instagram::after {
+  background-color: #e4405f;
+}
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
+}
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1da1f2;
+  color: #fff;
+}
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
+}
+
+@keyframes bg-pos {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes overflow-toggle {
+  0% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: visible;
+  }
+}
 header {
   background-color: #023373;
   display: flex;
@@ -183,6 +322,9 @@ header {
   width: 100%;
   max-width: 200px;
   height: auto;
+}
+.item img:hover {
+  transform: scale(1.08);
 }
 .item p {
   margin: 10px 0;

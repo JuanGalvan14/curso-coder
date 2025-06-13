@@ -15,7 +15,9 @@
     color: $text-white;
     font-size: $font-base;
 
-    &:hover,
+    &:hover{
+      transform: scale(1.4);
+    }
     &:focus {
       text-decoration: underline;
     }

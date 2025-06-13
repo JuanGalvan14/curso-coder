@@ -12,6 +12,9 @@
     width: 100%;
     max-width: 200px;
     height: auto;
+    &:hover{
+      transform: scale(1.08);
+    }
   }
 
   p {
